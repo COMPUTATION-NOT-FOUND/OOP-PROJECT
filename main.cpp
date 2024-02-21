@@ -6,14 +6,27 @@ Game *game = nullptr;
 
 int main(int argc, char *argv[])
 {
+    const int FPS=60;
+    const int FrameDelay= 1000/60;
+
+    Uint32 framestart;
+    int frametime;
+
     game = new Game();
-    game->init("GameWindow", 800, 600, false);
+    game->init("FROG_QUEST", 800, 600, false);
 
     while (game->running())
     {
         game->handleEvents();
         game->update();
         game->render();
+
+        frametime=SDL_GetTicks()-framestart;
+         if(FrameDelay>frametime){
+
+            SDL_Delay(FrameDelay-frametime);
+
+         }
     }
 
     game->clean();

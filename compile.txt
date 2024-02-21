@@ -1,2 +1,5 @@
-g++ -o your_executable_name game.cpp main.cpp -I"D:/msys2/mingw64/include" -L"D:/msys2/mingw64/lib" -lSDL2 -lSDL2main
+g++ -o your_executable_name Texturemanager.cpp GameObject.cpp Game.cpp main.cpp -I"D:/msys2/mingw64/include" -L"D:/msys2/mingw64/lib" -lSDL2 -lSDL2main
+g++ -o your_executable_name Texturemanager.cpp GameObject.cpp Game.cpp main.cpp -I"D:/msys2/mingw64/include" -L"D:/msys2/mingw64/lib" -lSDL2 -lSDL2main -lSDL2_image
 pacman -S mingw-w64-x86_64-SDL2
+pacman -S mingw-w64-x86_64-SDL2_image
+

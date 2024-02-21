@@ -1,6 +1,10 @@
 #include "Game.h"
+#include "TextureManager.h"
+#include  "GameObject.h"
 
 
+GameObject* player;
+SDL_Texture* PlayerTex;
 Game::Game()
 {}
 
@@ -22,11 +26,16 @@ void Game::init(const char* title, int width, int height, bool fullscreen)
 		renderer = SDL_CreateRenderer(window, -1, 0);
 		if (renderer)
 		{
-			SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+			SDL_SetRenderDrawColor(renderer, 0, 255, 255, 255);
 		}
 
 		isRunning = true;
 	}
+	player=new GameObject("assets/frog.PNG",renderer,0,0);
+	//SDL_Surface* tempsurface = IMG_Load("assets/frog.PNG");
+	//PlayerTex= SDL_CreateTextureFromSurface(renderer,tempsurface);
+	//SDL_FreeSurface(tempsurface);
+
 }
 
 void Game::handleEvents()
@@ -49,11 +58,14 @@ void Game::update()
 {
 	cnt++;
 	std::cout << cnt << std::endl;
+	player->update();
 }
 
 void Game::render()
 {
 	SDL_RenderClear(renderer);
+	//SDL_RenderCopy(renderer,PlayerTex,NULL,NULL);
+	player->Render();
 	SDL_RenderPresent(renderer);
 }
 

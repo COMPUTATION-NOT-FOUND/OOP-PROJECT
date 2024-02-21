@@ -2,6 +2,8 @@
 
 #include "D:/MSYS2/mingw64/include/SDL2/SDL.h"
 #include <iostream>
+#include "D:/MSYS2/mingw64/include/SDL2/SDL_image.h"
+
 
 class Game
 {
