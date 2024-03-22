@@ -1,2 +1,0 @@
-g++ -o your_executable_name game.cpp main.cpp -I"D:/msys2/mingw64/include" -L"D:/msys2/mingw64/lib" -lSDL2 -lSDL2main
-pacman -S mingw-w64-x86_64-SDL2
