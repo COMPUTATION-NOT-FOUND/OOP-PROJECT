@@ -1,4 +1,4 @@
-"D:\CLion 2023.2.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\muusm\OneDrive\Documents\iba\GAME_PROJ\GAME_PROJ -B C:\Users\muusm\OneDrive\Documents\iba\GAME_PROJ\GAME_PROJ\cmake-build-debug
+"D:\CLion 2023.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/CLion 2023.3.3/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\muusm\OneDrive\Documents\iba\GAME_PROJ\GAME_PROJ -B C:\Users\muusm\OneDrive\Documents\iba\GAME_PROJ\GAME_PROJ\cmake-build-debug
 -- The C compiler identification is GNU 13.2.0
 -- The CXX compiler identification is GNU 13.2.0
 -- Detecting C compiler ABI info
@@ -18,6 +18,6 @@
 -- Found SDL2_image: D:/MSYS2/mingw64/lib/libSDL2_image.dll.a (found version "2.8.2") 
 -- Found SDL2_ttf: C:/Users/muusm/OneDrive/Documents/iba/GAME_PROJ/GAME_PROJ/libraries/SDL2_ttf-2.22.0/x86_64-w64-mingw32/lib/libSDL2_ttf.dll.a (found version "2.22.0") 
 -- Found SDL2_mixer: C:/Users/muusm/OneDrive/Documents/iba/GAME_PROJ/GAME_PROJ/libraries/SDL2_mixer-2.8.0/x86_64-w64-mingw32/lib/libSDL2_mixer.dll.a (found version "2.8.0") 
--- Configuring done (1.5s)
--- Generating done (0.0s)
+-- Configuring done (26.6s)
+-- Generating done (0.1s)
 -- Build files have been written to: C:/Users/muusm/OneDrive/Documents/iba/GAME_PROJ/GAME_PROJ/cmake-build-debug

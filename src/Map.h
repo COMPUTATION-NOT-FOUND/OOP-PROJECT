@@ -13,5 +13,6 @@ private:
     SDL_Rect src,dest;
     SDL_Texture* tex;
 
+
     int map [20][20]{};
 };
