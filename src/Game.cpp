@@ -5,6 +5,7 @@
 
 Player * player;
 Map* map;
+Fruit * fruit;
 SDL_Renderer* Game::renderer =nullptr;
 
 Game::Game(){}
@@ -31,8 +32,9 @@ void Game::init(const char* title, int width, int height, bool fullscreen)
 
         isRunning = true;
     }
-    player = new Player("../assets/frog",0,0,"1",".png");
+    player = new Player("../assets/frog",100,0,0,"1",".png");
     map=new Map();
+    fruit= new Fruit("../assets/Fruit1.png",32,400,320, player);
 
 }
 
@@ -117,6 +119,7 @@ void Game::handleEvents() {
 void Game::update()
 {
 player->update();
+fruit->update();
 
 }
 
@@ -125,6 +128,7 @@ void Game::render()
     SDL_RenderClear(renderer);
     map->DrawMap();
     player->Render();
+    fruit->Render();
     SDL_RenderPresent(renderer);
 }
 
