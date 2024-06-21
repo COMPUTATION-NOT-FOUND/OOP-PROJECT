@@ -7,7 +7,7 @@ The Frog Game is a collaborative project created by three team members. The game
 
 - **Objective:** Control the frog and collect all the berries on the map.
 - **Controls:** Use the arrow keys to move the frog around.
-- **Winning:** Collect all the berries to win the game.
+- **Winning:** endless game eat berries to regain time.
 
 ## Artwork
 
