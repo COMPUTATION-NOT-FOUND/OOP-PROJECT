@@ -1,18 +1,22 @@
 #pragma once
+
 #include "Game.h"
 
-class Map{
+class Map {
 public:
-     Map();
-     ~Map();
+    Map();
 
-     void LoadMap(int arr[20][20]);
-     void DrawMap();
+    ~Map();
+
+    void LoadMap(int arr[20][20]);
+
+    void DrawMap();
+
+    void Clean();
 
 private:
-    SDL_Rect src,dest;
-    SDL_Texture* tex;
+    SDL_Rect src, dest;
+    const char* tex ;
 
-
-    int map [20][20]{};
+    int map[20][20]{};
 };

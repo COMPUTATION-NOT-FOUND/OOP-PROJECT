@@ -1,36 +1,33 @@
 #define SDL_MAIN_HANDLED
-#include <SDL.h>
+
 #include "Game.h"
+
+using namespace std;
 
 Game *game = nullptr;
 
-int main(int argc, char *argv[])
-{
-    const int FPS=20;
-    const int FrameDelay= 1000/FPS;
+int main(int argc, char *argv[]) {
+    game = new Game();
+    game->init("frog quest", 800, 640, false);
 
-    Uint32 framestart;
+    const int fps = 60;
+    const int frameDelay = 1000 / fps;
+
+    Uint32 frameStart;
     int frametime;
 
-    game = new Game();
-    game->init("FROG_QUEST", 800, 640, false);
+    while (game->running()) {
 
-    while (game->running())
-    {
-        framestart=SDL_GetTicks();
+        frameStart = SDL_GetTicks();
+
         game->handleEvents();
         game->update();
         game->render();
 
-        frametime = SDL_GetTicks() - framestart;
-        if(FrameDelay>frametime){
-
-            SDL_Delay(FrameDelay-frametime);
-
+        frametime = SDL_GetTicks() - frameStart;
+        if (frameDelay > frametime) {
+            SDL_Delay(frameDelay - frametime);
         }
     }
-
     game->clean();
-    delete game;
-    return 0;
 }
